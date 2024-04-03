@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= skill.name %></title>
-</head>
-<body>
-  <h1><%= skill.name %></h1>
-  <p>Level: <%= skill.level %></p>
-  <a href="/skills">Back to Skills</a>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= skill.name %></title>
+  </head>
+  <body>
+    <h1><%= skill.name %></h1>
+    <p>Level: <%= skill.level %></p>
+    <a href="/skills">Back to Skills</a>
+    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete Skill</button>
+    </form>
+  </body>
 </html>
